@@ -1,11 +1,13 @@
+
+
+
 describe('ProyectoFinal', () => {
-    it('to buy animals', () => {
-        cy.visit("https://www.saucedemo.com/");
-        cy.wait(1000);
-        cy.get("input[name=user-name]").type("standard_user");
-        cy.get("input[name=password]").type("secret_sauce");
+    it('logearse', () => {
+        abrirPagina();
 
+        llenarInput("input[name=user-name]", "standard_user");
+        llenarInput("input[name=password]", "secret_sauce");
 
-
+        cy.get("input[id=login-button]").click();
     })
 })
