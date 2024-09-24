@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-09-24T04:12:57.306Z",
+    "end": "2024-09-24T04:13:15.142Z",
+    "duration": 17836,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8e3108fe-ee17-44ab-ba1f-f8af1d2f5192",
+      "title": "",
+      "fullFile": "cypress/e2e/agregarProducto/agregarProducto.cy.js",
+      "file": "cypress/e2e/agregarProducto/agregarProducto.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "91db0a1b-50cc-460f-9394-40c533d6d602",
+          "title": "ProyectoFinal",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "agregarProducto",
+              "fullTitle": "ProyectoFinal agregarProducto",
+              "timedOut": null,
+              "duration": 15765,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _util.abrirPagina)();\n(0, _util.llenarInput)(\"input[name=user-name]\", \"standard_user\");\n(0, _util.llenarInput)(\"input[name=password]\", \"secret_sauce\");\n(0, _util.hacerClick)(\"input[id=login-button]\");\n(0, _util.hacerClick)(\"button[id=add-to-cart-sauce-labs-backpack]\");\n(0, _util.hacerClick)(\"button[id=add-to-cart-sauce-labs-bolt-t-shirt]\");\n(0, _util.hacerClick)(\"button[id=add-to-cart-sauce-labs-onesie]\");\ncy.wait(3000);\n// Assert para verificar que el carrito tiene 3 artículos (El have.text asegurará que el número mostrado dentro del span sea '3')\ncy.get('.shopping_cart_badge').should('have.text', '3');",
+              "err": {},
+              "uuid": "c87213bb-7376-4dc8-a1d6-ec9b27651c73",
+              "parentUUID": "91db0a1b-50cc-460f-9394-40c533d6d602",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c87213bb-7376-4dc8-a1d6-ec9b27651c73"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 15765,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

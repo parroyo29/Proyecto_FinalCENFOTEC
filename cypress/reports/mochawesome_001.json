@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-09-24T04:12:13.456Z",
+    "end": "2024-09-24T04:12:54.923Z",
+    "duration": 41467,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "69c2e04a-f915-4434-bdf5-20aea92edc2e",
+      "title": "",
+      "fullFile": "cypress/e2e/checkout/checkout.cy.js",
+      "file": "cypress/e2e/checkout/checkout.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4e3d4299-34cf-4e4d-a316-2833659955f9",
+          "title": "ProyectoFinal",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "comprar",
+              "fullTitle": "ProyectoFinal comprar",
+              "timedOut": null,
+              "duration": 39297,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _util.abrirPagina)();\n(0, _util.llenarInput)(\"input[name=user-name]\", \"standard_user\");\n(0, _util.llenarInput)(\"input[name=password]\", \"secret_sauce\");\n(0, _util.hacerClick)(\"input[id=login-button]\");\n(0, _util.hacerClick)(\"button[id=add-to-cart-sauce-labs-backpack]\");\n(0, _util.hacerClick)(\"button[id=add-to-cart-sauce-labs-bolt-t-shirt]\");\n(0, _util.hacerClick)(\"button[id=add-to-cart-sauce-labs-onesie]\");\n(0, _util.hacerClick)(\"a[class=shopping_cart_link]\");\n(0, _util.hacerClick)(\"button[id=remove-sauce-labs-onesie]\");\n(0, _util.hacerClick)(\"button[id=remove-sauce-labs-backpack]\");\n//Test Checkout (Formulario)\n(0, _util.hacerClick)(\"button[id=checkout]\");\ncy.wait(2000);\n(0, _util.llenarInput)(\"input[id=first-name]\", \"Paola\");\ncy.wait(1000);\n(0, _util.llenarInput)(\"input[id=last-name]\", \"Arroyo Garcia\");\ncy.wait(1000);\n(0, _util.llenarInput)(\"input[id=postal-code]\", \"8506\");\ncy.wait(1000);\n(0, _util.hacerClick)(\"input[id=continue]\");\ncy.wait(3000);\n(0, _util.hacerClick)(\"button[id=finish]\");\n// Assert verificación pedido completado\ncy.url().should('include', '/checkout-complete.html');\ncy.wait(2000);\n// Assert mensaje\ncy.get('.complete-header').should('contain.text', 'Thank you for your order');",
+              "err": {},
+              "uuid": "21a6fa11-5543-4f55-a5f3-11a60f82cf5c",
+              "parentUUID": "4e3d4299-34cf-4e4d-a316-2833659955f9",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "21a6fa11-5543-4f55-a5f3-11a60f82cf5c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 39297,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

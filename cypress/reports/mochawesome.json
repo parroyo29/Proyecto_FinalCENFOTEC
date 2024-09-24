@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-09-24T04:11:49.168Z",
+    "end": "2024-09-24T04:12:11.041Z",
+    "duration": 21873,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5501ef78-a159-4d3a-a044-58d98ffdda16",
+      "title": "",
+      "fullFile": "cypress/e2e/eliminarProducto/eliminarProducto.cy.js",
+      "file": "cypress/e2e/eliminarProducto/eliminarProducto.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f630bcb8-8046-49b1-8229-2bc934dcea01",
+          "title": "ProyectoFinal",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "eliminarProducto",
+              "fullTitle": "ProyectoFinal eliminarProducto",
+              "timedOut": null,
+              "duration": 19472,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _util.abrirPagina)();\n(0, _util.llenarInput)(\"input[name=user-name]\", \"standard_user\");\n(0, _util.llenarInput)(\"input[name=password]\", \"secret_sauce\");\n(0, _util.hacerClick)(\"input[id=login-button]\");\n(0, _util.hacerClick)(\"button[id=add-to-cart-sauce-labs-backpack]\");\n(0, _util.hacerClick)(\"button[id=add-to-cart-sauce-labs-bolt-t-shirt]\");\n(0, _util.hacerClick)(\"button[id=add-to-cart-sauce-labs-onesie]\");\n(0, _util.hacerClick)(\"a[class=shopping_cart_link]\");\n(0, _util.hacerClick)(\"button[id=remove-sauce-labs-onesie]\");\n(0, _util.hacerClick)(\"button[id=remove-sauce-labs-backpack]\");\n//Assert\n// 1 producto en el carrito\ncy.get('.cart_item').should('have.length', 1);\n// producto restante sea (Sauce Labs Bolt T-Shirt)\ncy.get('.inventory_item_name').should('contain.text', 'Sauce Labs Bolt T-Shirt');",
+              "err": {},
+              "uuid": "53accaed-ab84-4328-b16f-a30bbdd048f7",
+              "parentUUID": "f630bcb8-8046-49b1-8229-2bc934dcea01",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "53accaed-ab84-4328-b16f-a30bbdd048f7"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 19472,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
