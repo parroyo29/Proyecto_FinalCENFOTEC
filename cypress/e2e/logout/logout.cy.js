@@ -37,5 +37,8 @@ describe('ProyectoFinal', () => {
         hacerClick("button[id=react-burger-menu-btn]");
         hacerClick("a[id=logout_sidebar_link]");
 
+        // Assert volver al dominio /
+        cy.url().should('include', 'www.saucedemo.com');
+
 
     })});
