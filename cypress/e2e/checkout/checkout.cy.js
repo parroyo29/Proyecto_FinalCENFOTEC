@@ -33,5 +33,15 @@ describe('ProyectoFinal', () => {
         cy.wait(3000);
         hacerClick("button[id=finish]");
 
+        // Assert verificación pedido completado
+        cy.url().should('include', '/checkout-complete.html');
+        cy.wait(2000);
+
+        // Assert mensaje
+        cy.get('.complete-header').should('contain.text', 'Thank you for your order');
+
+
+
+
 
     })});
