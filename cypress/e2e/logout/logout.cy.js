@@ -2,7 +2,7 @@ import {abrirPagina, hacerClick, llenarInput} from "../util";
 
 
 describe('ProyectoFinal', () => {
-    it('eliminar', () => {
+    it('salirPagina', () => {
         abrirPagina();
 
         llenarInput("input[name=user-name]", "standard_user");
